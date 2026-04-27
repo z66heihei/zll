@@ -102,6 +102,7 @@
 
     .panel {
       position: relative;
+      isolation: isolate;
       overflow: hidden;
       padding: 42px 22px 30px;
       border-radius: var(--radius);
@@ -113,6 +114,7 @@
     .panel::before {
       content: "";
       position: absolute;
+      z-index: 0;
       left: 50%;
       top: 124px;
       width: 88%;
@@ -126,6 +128,7 @@
     .panel::after {
       content: "";
       position: absolute;
+      z-index: 0;
       left: 50%;
       bottom: -170px;
       width: 150%;
@@ -137,6 +140,7 @@
 
     .stage {
       position: relative;
+      z-index: 1;
       min-height: 410px;
       display: flex;
       align-items: center;
@@ -145,6 +149,7 @@
 
     .ring {
       position: absolute;
+      z-index: 0;
       left: 50%;
       bottom: 26px;
       width: min(92%, 620px);
@@ -194,7 +199,7 @@
 
     .dot {
       position: absolute;
-      z-index: 1;
+      z-index: 0;
       border-radius: 50%;
       background: radial-gradient(circle at 35% 35%, #8fc0ff, #257cff 72%);
       box-shadow: 0 10px 18px rgba(45, 123, 255, 0.25);
@@ -231,6 +236,8 @@
     }
 
     .feature {
+      position: relative;
+      z-index: 3;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -250,6 +257,8 @@
     }
 
     .actions {
+      position: relative;
+      z-index: 3;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
@@ -294,6 +303,8 @@
     }
 
     .version {
+      position: relative;
+      z-index: 3;
       margin-top: 34px;
       text-align: center;
       color: #1f2937;
@@ -302,6 +313,8 @@
     }
 
     .tips {
+      position: relative;
+      z-index: 3;
       margin-top: 14px;
       text-align: center;
       color: rgba(17, 24, 39, 0.62);
@@ -473,7 +486,7 @@
         <div class="icon-shell">
           <img
             class="icon-image"
-            src="https://z66heihei.github.io/zll/%E6%95%B4%E7%90%86%E5%BD%95/ic_launcher.png"
+            src="https://z66heihei.github.io/zll/ic_launcher.png"
             alt="整理录图标"
           >
         </div>
@@ -482,11 +495,11 @@
       <div class="feature">安全无广告</div>
 
       <div class="actions">
-        <a class="button" href="https://z66heihei.github.io/zll/%E6%95%B4%E7%90%86%E5%BD%95.apk">
+        <a class="button" href="https://z66heihei.github.io/zll/整理录.apk">
           <span class="button-icon">🤖</span>
           <span>Android下载</span>
         </a>
-        <a class="button" href="https://z66heihei.github.io/zll/%E6%95%B4%E7%90%86%E5%BD%95.mobileconfig">
+        <a class="button" href="https://z66heihei.github.io/zll/整理录.mobileconfig">
           <span class="button-icon"></span>
           <span>iOS下载</span>
         </a>
